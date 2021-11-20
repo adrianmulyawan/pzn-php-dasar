@@ -2,7 +2,7 @@
 
 // - Recursive Function
 // 1. Recursive Function adalah kemampuan function untuk memanggil dirinya sendiri (memanggil function dirinya sendiri)
-// 2. Kadang memang ada banyak problem, yang lebih mudah diselesaikan menggunakan recursive, function, seperti contohnya kasus factorial
+// 2. Kadang memang ada banyak problem, yang lebih mudah diselesaikan menggunakan recursive function, seperti contohnya kasus factorial
 
 // - Kode Factorial Menggunakan Loop
 function factorialLoop (int $value): int
@@ -24,7 +24,7 @@ function factorialRecursive (int $value): int
         return 1;
     } else {
         return $value * factorialRecursive($value - 1);
-        // 20 12 6 2 1
+        // 20 12 6 2 
     }
 }
 var_dump(factorialRecursive(5));
@@ -37,13 +37,13 @@ var_dump(factorialRecursive(5));
 // 3. Kenapa problem ini terjadi? Karena kerika kita memanggil function, PHP akan menyimpannya didalam stack, jika function tsb memanggil function lain, maka stack akan menumpuk teus, dan jika terlalu banyak, makan akan membutuhkan konsumsi memory besar, jika sudah melewati batas, maka kan terjadi error memory
 
 // - Kode: Error StackOverflow
-function loop(int $value)
-{
-    if ($value == 0) {
-        echo "End Loop" . PHP_EOL;
-    } else {
-        echo "Loop-$value" . PHP_EOL;
-        loop($value - 1);
-    }
-}
-loop(3000000);
+// function loop(int $value)
+// {
+//     if ($value == 0) {
+//         echo "End Loop" . PHP_EOL;
+//     } else {
+//         echo "Loop-$value" . PHP_EOL;
+//         loop($value - 1);
+//     }
+// }
+// loop(3000000);
