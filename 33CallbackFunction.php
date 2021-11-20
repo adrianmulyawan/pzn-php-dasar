@@ -1,10 +1,10 @@
 <?php
 
 // - Callback Function
-// 1. Callback adalah sebuah mekanisme sebuah function memanggil function lainnya sesaui dengan yang diberikan di argument/parameter
+// 1. Callback adalah sebuah mekanisme, dimana sebuah function dapat memanggil function lainnya sesuai dengan yang diberikan di argument/parameter
 // 2. Hal ini sebenarnya sudah kita pelajari di materi Variabel Function dan Anonymous Function
-// 3. Namun di PHP ada cara lain untuk implementasi callback, yaitu dengan menggunakan tipe data "callable" yang kita tambakan didalam argument 
-// 4. Dan untuk memanggil callback function tsb, kita bisa menggunakan function "call_user_func(callable, arguments)"
+// 3. Namun di PHP ada cara lain untuk implementasi callback, yaitu dengan menggunakan tipe data "callable" yang kita tambahkan didalam argument/parameter 
+// 4. Dan untuk memanggil callback function tsb, kita bisa menggunakan function "call_user_func(callable, arguments/parameter)"
 
 // - Kode: Callback Function
 function sayHello (string $name, callable $filter)
@@ -16,7 +16,7 @@ function sayHello (string $name, callable $filter)
 sayHello('Adrian', "strtoupper");
 sayHello('Adrian', "strtolower");
 
-// Menambahkan Anonymous Function sebagai argument/parameter
+// Menambahkan Anonymous Function sebagai argument/parameter (callback)
 sayHello("Manda", function (string $name): string {
     return strtoupper($name);
 });
