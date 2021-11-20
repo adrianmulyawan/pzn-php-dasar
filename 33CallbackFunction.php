@@ -15,7 +15,11 @@ function sayHello (string $name, callable $filter)
 
 sayHello('Adrian', "strtoupper");
 sayHello('Adrian', "strtolower");
+
+// Menambahkan Anonymous Function sebagai argument/parameter
 sayHello("Manda", function (string $name): string {
     return strtoupper($name);
 });
+
+// Menambahkan Arrow Function sebagai argument/parameter
 sayHello('Acha', fn(string $name) => strtolower($name)); 
