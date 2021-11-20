@@ -29,7 +29,7 @@
 // ================================================================================================
 
 // - Kegunaan Variable Function
-// Kegunaan Variable Function ini adalah bisa membuat/menambahkan argument/parameter disebuah function dimana kita bisa menambahkan "function" yang lain
+// Kegunaan Variable Function ini adalah kita bisa menambahkan argument/parameter disebuah function dimana kita bisa menambahkan "function" yang lain
 
 // - Contoh Variable Function 1
 // function sayHello(string $name, $filter) 
