@@ -2,9 +2,10 @@
 
 // Goto Operator
 // 1. Salah satu fitur yang sebenarnya jarang sekali digunakan di PHP adalah goto operator
-// 2. Kenapa jarang digunakan karena jika terlalu menggunakan goto operator, kode program aplikasi akan membingunkan yang membaca kodenya
+// 2. Kenapa jarang digunakan karena jika terlalu sering menggunakan goto operator, kode program aplikasi akan membingunkan bagi yang membaca kodenya
 // 3. goto adalah fitur dimana kita bisa loncat ke kode program sesuai dengan keinginan kita
-// 4. Agar goto bisa loncar ke kode program, kita harus membuat label di php dengan menggunakan nama "label" lalu diakihiri ":" (colon)
+// 4. Untuk membuat operator goto kita dapat menulis "goto nama_goto;"
+// 5. Agar goto bisa loncat ke kode program, kita harus membuat label di php dengan menggunakan "nama_goto" lalu diakihiri ":" (colon)
 
 // - Syntax goto
 // goto nama_goto;
@@ -13,15 +14,16 @@
 // nama_goto:
 
 // - Contoh go to 1:
-// goto a;
-// echo "Hello World!" . PHP_EOL;
+goto a;
+echo "Hello World!" . PHP_EOL;
 
-// a:
-// echo "Hello A" . PHP_EOL;
+a:
+echo "Hello A" . PHP_EOL;
 // Maksud dari kode diatas kita membuat operator goto dengan nama "a"
 // Dan selanjutnya kita membuat / menampilkan tulisan "Hello World!
 // Dibawahnya kita panggil operator goto tadi dan menambahkan / menampilkan "Hello A"
 // Jika kita jalankan yang muncul hanya tulisan "Hello A". Mengapa demikian? karena disini kode php membaca dari atas kebawah dan saat melihat operator "goto a;" php menskip tulisan "Hello World" dan hanya menjadlan "Hello A"
+// Hasil: Hello A
 
 // - Contoh go to 2: Kompleks
 $counter = 1;
