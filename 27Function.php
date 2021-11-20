@@ -21,14 +21,29 @@ function sayHello() {
 // Menjalankan function
 sayHello();
 sayHello();
+// Hasil
+// Hello Function
+// Hello Function
 
 // - Lokasi Function
 // 1. PHP sangat fleksibel dalam pembuatan function
-// 2. Tidak seperti pada bahasa pemrograman lain yang harus ada aturan lokasi dimana membuat function
+// 2. Tidak seperti pada bahasa pemrograman lain, yang harus ada aturan lokasi dimana membuat function
 // 3. Di PHP kita bebas membuat function dimanapun, bisa didalam if statement, didalam function, dan sebagainya
 // 4. Namun perlu diingat, jika kode function yang belum dieksekusi oleh PHP, makan function tsb tidak akan bisa digunakan
 
 // - Contoh Function Belum Dijalankan
+// $buat = false;
+// if ($buat) {
+//     function sayHay() {
+//         echo "Hay Function" . PHP_EOL;
+//     }
+// }
+// sayHay();
+// Jika dijalankan maka akan error kenapa? disini bisa dilihat variabel $buat bernilai "false"
+// Ketika didalam pengkondisian variabel tersebut bernilai salah / false
+// Dan ketika kita panggil functionnya maka akan error, karna function ini isitilahnya belum dipanggil / dijalankan / dibuat didalam php 
+
+// - Contoh Function Bisa Dijalankan
 $buat = true;
 if ($buat) {
     function sayHay() {
@@ -36,6 +51,4 @@ if ($buat) {
     }
 }
 sayHay();
-// Jika dijalankan maka akan error kenapa? disini bisa dilihat variabel $buat bernilai "false"
-// Ketika didalam pengkondisian variabel tersebut bernilai salah / false
-// Dan ketika kita panggil functionnya maka akan error, karna function ini isitilahnya belum dipanggil / dijalankan / dibuat didalam php 
+// Hasil: Hay Function
