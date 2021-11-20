@@ -3,9 +3,9 @@
 // - Function Argument
 // 1. Kita bisa mengirim informasi ke function yang ingin kita panggil (argument/parameter)
 // 2. Untuk melakukan hal tersebut, kita perlu menambahkan argument / parameter di function yang sudah kita buat
-// 3. Cara membuat argument sama seperti cara membuat variabel
+// 3. Cara membuat argument sama seperti cara membuat variabel ($nama_argument_atau_parameter)
 // 4. Argument ditempatkan didalam kurung "()" di deklarasi function
-// 5. Argumet bisa lebih dari satu, jika lebih dari satu, harus dipisah menggunakan tanda koma
+// 5. Argumet bisa lebih dari satu, jika lebih dari satu, harus dipisah menggunakan tanda koma ","
 
 // - Contoh Function Argument
 // function sayHello($name) {
@@ -14,7 +14,7 @@
 // sayHello('Adrian');
 // sayHello('Manda');
 
-// - Contih Function > 1 Argument
+// - Contoh Function > 1 Argument
 // function sayHello($first_name, $last_name) {
 //     echo "Hello $first_name $last_name" . PHP_EOL;
 // }
@@ -25,7 +25,7 @@
 
 // - Default Argument Value
 // 1. PHP mendukung default argument value
-// 2. Fitur ini memungkinkan jika ketika kita memanggil function tidak memasukan parameter, kita bisa menenetikan data defaultnya apa
+// 2. Fitur ini memungkinkan jika ketika kita memanggil function tidak memasukan parameter, kita bisa menenetukan data defaultnya apa
 
 // - Contoh Default Argument Value
 // function sayHello($name = 'User') {
@@ -39,7 +39,7 @@
 // ================================================================================================
 
 // - Kesalahan Default Argument Value
-// 1. Default argument value bisa disimpan didalam argument manapun
+// 1. Default argument value bisa disimpan didalam argument/parameter manapun
 // 2. Nmaun jika argument lebih dari satu, dan kita menyimpat default argument value di parameter awal, maka itu kurang berguna
 
 // - Contoh Kesalahan Default Argument Value
@@ -47,7 +47,7 @@
 //     echo "Hello $first_name $last_name" . PHP_EOL;
 // }
 // sayHello('Mulyawan');
-// tidak akan berguna jadi yang kita isikan ini dianggap sebagai parameter pertama
+// tidak akan berguna jadi yang kita isikan ini dianggap sebagai argument/parameter pertama
 // dan ketika dijalankan akan error
 // Untuk mengakalinya kita bisa membuat parameter yang ingin diisi default argument value dibelakang
 
@@ -107,7 +107,7 @@
 
 // - Variabel Length Argument List
 // 1. Variabel-length argument list merupakan kemampuan dimana kita bisa membuat sebuah parameter yang menerima banyak value
-// 2. Variabel-length argument list secara otomatis akan membuat argument tsb menjadi array, namun kita tidak perlu manula mengirimarray ke functionnya
+// 2. Variabel-length argument list secara otomatis akan membuat argument tsb menjadi array, namun kita tidak perlu manual mengirim array ke functionnya
 // 3. Variabel length argument list hanya bisa dilakukan di argument posisi terakhir
 // 4. Untuk membuat variabel length argument list, kita bisa memngunakan tanda "..." (titik 3x) sebelum nama argument
 
@@ -120,19 +120,23 @@
 //     echo "Total penjumlahan " . implode(",", $values) . " adalah = $total" . PHP_EOL;
 // }
 // sumAll([1,2,3,4,5]);
+// Hasil: Total penjumlahan 1,2,3,4,5 adalah = 15
 
 // - Contoh Variabel length argument list
-function sumAll(...$values) {
-    $total = 0;
-    foreach ($values as $value) {
-        $total += $value;
-    }
-    echo "Total penjumlahan " . implode(",", $values) . " adalah = $total" . PHP_EOL;
-}
-sumAll(1,2,3,4,5);
+// function sumAll(...$values) {
+//     $total = 0;
+//     foreach ($values as $value) {
+//         $total += $value;
+//     }
+//     echo "Total penjumlahan " . implode(",", $values) . " adalah = $total" . PHP_EOL;
+// }
+// sumAll(1,2,3,4,5);
+// Hasil: Total penjumlahan 1,2,3,4,5 adalah = 15
 
 // Bagaimana jika kita memiliki data yang berupa array ?
-$values = [10,20,30,40,50];
+// $values = [10,20,30,40,50];
 // sumAll($values); Hasilnya bakal error
+
 // Kita dapat menambahkan "..." (titik 3x didepan argument/parameter) pada saat memanggil functionnya
-sumAll(...$values);
+// sumAll(...$values);
+// Hasil: Total penjumlahan 1,2,3,4,5 adalah = 15
