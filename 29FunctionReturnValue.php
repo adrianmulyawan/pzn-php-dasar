@@ -3,7 +3,7 @@
 // Function Return Value
 // 1. Secara default, function itu tidak menghasilkan value apapun, namun jika kita ingin, kita bisa membuat sebuah function yang mengembalikan nilai
 // 2. Dan didalam block function, untuk menghasilkan nilai tsb, kita harus menggunakan kunci "return", lalu diiukuti dengan data yang ingin dihasilkan
-// 3. Kita hanya bisa menghasilkan 11 data disebuah function, tidak bisa lebih dari satu
+// 3. Kita hanya bisa menghasilkan 1 data disebuah function, tidak bisa lebih dari satu
 
 // - Contoh Function Return Value 1
 // function sum(int $a, int $b) {
