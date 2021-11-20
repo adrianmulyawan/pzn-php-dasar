@@ -19,12 +19,12 @@
 
 // - Contoh Function Return Value 2
 // function getFinalValue(int $value) {
-//     if ($value >= 100) {
-//         return 'A';
+//     if ($value > 100) {
+//         return 'Nilai Tidak Valid';
 //     } else if ($value >= 90) {
-//         return 'A-';
+//         return 'A';
 //     } else if ($value >= 80) {
-//         return 'A/B';
+//         return 'A-';
 //     } else if ($value >= 70) {
 //         return 'B';
 //     } else if ($value >= 60) {
@@ -36,8 +36,9 @@
 //     }
 // }
 
-// $nilaiAdrian = getFinalValue(95);
+// $nilaiAdrian = getFinalValue(110);
 // var_dump($nilaiAdrian);
+// Hasil: Nilai Tidak Valid
 
 // $nilaiManda = getFinalValue(100);
 // var_dump($nilaiManda);
@@ -46,7 +47,7 @@
 
 // - Return Type Declarations
 // 1. Sama seperti argument, pada return value pun kita bisa mendeklarasikan tipe datanya
-// 2. Hal ini selain mempermudah kita ketika membaca tipe data kembalian functionnya, bisa juga digunakan untuk menjaga jangan sampai kita mengembalikatipe data yang salah di function
+// 2. Hal ini selain mempermudah kita ketika membaca tipe data kembalian functionnya, bisa juga digunakan untuk menjaga jangan sampai kita mengembalikan tipe data yang salah di function
 // 3. Untuk mendeklarasikan tipe data kembalian function, setelah kurung "()" kita bisa tambahan ":" diikuti tipe data kembaliannya
 
 // - Contoh Return Type Declaration int
@@ -60,14 +61,13 @@ $result = sum(10,20);
 var_dump($result);
 
 // - Contoh Return Type Declaration string
-function getFinalValue(int $value): string
-{
-    if ($value >= 100) {
-        return 'A';
+function getFinalValue(int $value) {
+    if ($value > 100) {
+        return 'Nilai Tidak Valid';
     } else if ($value >= 90) {
-        return 'A-';
+        return 'A';
     } else if ($value >= 80) {
-        return 'A/B';
+        return 'A-';
     } else if ($value >= 70) {
         return 'B';
     } else if ($value >= 60) {
