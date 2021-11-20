@@ -50,8 +50,10 @@ function sayHello(string $name, $filter)
 
 function sampleFunction(string $name): string
 {
-    return "Sample $name" . PHP_EOL;
+    return "Sample $name";
 }
 
 sayHello('Wawan', "sampleFunction");
 // Hasil: Hello Sample Wawan
+sayHello('wawan', 'strtoupper');
+sayHello('MANDA', 'strtolower');
