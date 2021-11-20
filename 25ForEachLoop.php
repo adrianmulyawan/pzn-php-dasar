@@ -11,16 +11,16 @@
 // }
 
 // - Mengakses array dengan for loop
-// $names = ['Adrian', 'Manda', 'Alfan', 'Putri', 'Acha'];
-// for ($i = 0; $i < count($names); $i++) { 
-//     echo "Data ke-{$i}: " . $names[$i] . PHP_EOL;
-// }
+$names = ['Adrian', 'Manda', 'Alfan', 'Putri', 'Acha'];
+for ($i = 0; $i < count($names); $i++) { 
+    echo "Data ke-{$i}: " . $names[$i] . PHP_EOL;
+}
 
 // - Mengakses Array Dengan Foreach
-// $names = ['Adrian', 'Manda', 'Alfan', 'Putri', 'Acha'];
-// foreach ($names as $name) {
-//     echo "Hasil Perulangan Dengan Foreach: $name" . PHP_EOL;
-// }
+$names = ['Adrian', 'Manda', 'Alfan', 'Putri', 'Acha'];
+foreach ($names as $name) {
+    echo "Hasil Perulangan Dengan Foreach: $name" . PHP_EOL;
+}
 
 // - Mengakses Array yang menggunakan Key-Value (Map)
 $person = [
