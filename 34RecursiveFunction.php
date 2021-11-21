@@ -24,7 +24,7 @@ function factorialRecursive (int $value): int
         return 1;
     } else {
         return $value * factorialRecursive($value - 1);
-        // 20 12 6 2 
+        // 5*4=20, 20*3=60, 60*2=120
     }
 }
 var_dump(factorialRecursive(5));
