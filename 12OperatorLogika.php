@@ -23,6 +23,7 @@ echo PHP_EOL;
 // Dibalik datanya jika dia true jadi false, jika dia false jadi true
 // True jika $a bernilai false
 var_dump(!true);
+var_dump(!false);
 echo PHP_EOL;
 
 // - XOR (xor)
