@@ -4,7 +4,7 @@
 // Float: bilang pecahan (7.5)
 
 // Di PHP kita bisa menambahkan "_" (garis bawah) pada angka, ini hanya digunakan untuk memudahkan membacanya
-// Saat dijakan "_" akan di IGNORE
+// Saat dijlankan "_" akan di IGNORE
 
 // Untuk angkat negatif dapat kita beri tanda "-"
 
@@ -26,6 +26,7 @@ echo "Underscore di Number: ";
 var_dump(1_650_750_200);
 
 // ============================================================================================
+echo PHP_EOL;
 
 // Number: Float 
 echo "Floating Point: ";
