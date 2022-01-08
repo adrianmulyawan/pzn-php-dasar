@@ -12,6 +12,7 @@ echo $a1++;
 echo "\n";
 echo $a1;
 echo "\n";
+echo PHP_EOL;
 
 // 2. Pre Increment
 // ++$a 
@@ -21,6 +22,7 @@ echo ++$a2;
 echo "\n";
 echo $a2;
 echo "\n";
+echo PHP_EOL;
 
 // 3. Post Decrement
 // $a--
@@ -30,6 +32,7 @@ echo $a3--;
 echo "\n";
 echo $a3;
 echo "\n";
+echo PHP_EOL;
 
 // 4. Pre Decrement 
 // --$a
@@ -37,6 +40,7 @@ echo "\n";
 $a4 = 30;
 echo --$a4;
 echo "\n";
+echo PHP_EOL;
 
 $a = 10;
 $b = $a++;
