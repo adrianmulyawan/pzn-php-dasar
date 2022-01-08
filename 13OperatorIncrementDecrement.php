@@ -49,6 +49,7 @@ $b = $a++;
 // $a += 1;
 var_dump($a);
 var_dump($b);
+echo PHP_EOL;
 
 $b = 10;
 $c = ++$b;
