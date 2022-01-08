@@ -10,7 +10,10 @@ $total = 0;
 $a = 10;
 $b = 15;
 
-$total += $a;
-$total += $b;
+// $total += $a;
+// $total += $b;
+
+// Atau bisa buat seperti ini:
+$total += $a + $b;
 
 var_dump($total);
