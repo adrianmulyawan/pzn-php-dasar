@@ -3,7 +3,7 @@
 // Tipe Data Null
 // 1. Nilai NULL merepresentasikan sebuah variable tanpa nilai
 // 2. Saat kita membuat variable, lalu ingin menghapus data yang terdapat di variable tersebut, kita bisa menggunakan NULL untuk mengosongkan variable tersebut
-// 3. Untuk membuat data NULL, kita bisamenggunakan kata kunci NULL (case insensitive)
+// 3. Untuk membuat data NULL, kita bis amenggunakan kata kunci NULL (case insensitive)
 
 $name = "Adrian";
 $name = null;
