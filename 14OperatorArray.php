@@ -5,7 +5,7 @@
 // 2. Mungkin terlihat mirip dengan operator-operator sebelumnya, tapi caranya sedikit berbeda
 
 // Operator Array
-// 1. Union 
+// 1. Union: Menggabungkan 2 Buah Array
 // $a + $b 
 // Menggabungkan array $a dan $b
 // $namaDepan = [
@@ -20,7 +20,7 @@
 
 // ====================================================================
 
-// 2. Equality
+// 2. Equality: Membandingkan 2 buah data array
 // $a == $b
 // True jika $a dan $b memiliki key dan value sama walapun letak posisinya tidak sama
 // $menu1 = [
@@ -43,7 +43,7 @@
 
 // $menu4 = [
 //     'makanan' => 'Mie Ayam Bakso Pangsit',
-//     'minuman' => 'Teh Botol'
+//     'minuman' => 'Teh Botol',
 //     'food' => 'Roti Bakar',
 //     'drink' => 'Milk Shake'
 // ];
@@ -54,7 +54,7 @@
 
 // ====================================================================
 
-// 3. Identity 
+// 3. Identity: Membandingkan 2 buah data array (tetapi harus identik)
 // $a === $b
 // True jika $a dan $b memiliki key-value sama dan posisi sama
 // $menu1 = [
@@ -120,8 +120,8 @@
 //     'minuman' => 'Esteh'
 // ];
 // $menu2 = [
-//     'minuman' => 'Dawet',
-//     'makanan' => 'Nasi Goreng'
+//     'makanan' => 'Nasi Goreng',
+//     'minuman' => 'Dawet'
 // ];
 // $menu = $menu1 != $menu2;
 // echo "Hasil dari Inequality: ";
