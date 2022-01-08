@@ -6,16 +6,18 @@
 // - true jika perbandingannya benar
 // - false jika perbandingannya salah
 
+// Variabel
+$a1 = "10";
+$a2 = 10;
+$a3 = 10;
+$a4 = 20;
+
 // Operator Perbandingan
 // 1. Sama dengan
 // $a == $b 
 // True jika $a sama dengan $b setelah dilakukan koversi tipe data
 // Konversi tipe data (type juggling): otomatis merubah tipe data
 // Contohnya saat memasukan string 10 dikonversikan menjadi int 10
-$a1 = "10";
-$a2 = 10;
-$a3 = 10;
-$a4 = 20;
 echo "Hasil dari $a1 == $a2 adalah:  ";
 var_dump($a1 == $a2);
 
