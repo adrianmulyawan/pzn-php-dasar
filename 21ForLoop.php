@@ -13,7 +13,7 @@
 // 1. Init Statement akan dieksekusi hanya sekali diawal perulangan
 // 2. Kondisi akan dilakukan pengecakan dalam setiap perulangan, jika true perulangan akan dilakukan, jika false perulangan akan berhenti
 // 3. Post statement akan dieksekusi setiap kali diakhir perulangan
-// 4. Init statement, kondisi dan Post Statement tidak wajib diisi, jika Kondisi tidak diisi berarti kondisi selalu bernilai true
+// 4. Init statement, Kondisi dan Post Statement tidak wajib diisi, jika Kondisi tidak diisi berarti kondisi selalu bernilai true
 
 // - Infinite For Loop
 // for (; ;) { 
@@ -41,7 +41,7 @@
 
 // - Contoh For Loop
 // $nilai = 10;
-// for ($i=0; $i < $nilai; $i++) { 
+// for ($i=1; $i <= $nilai; $i++) { 
 //     echo "Nilai $i" . PHP_EOL;
 // }
 
