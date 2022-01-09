@@ -38,11 +38,11 @@ $date = new DateTime();
 // 2. Block diawali dan diakhiri dengan kurung kurawal "{}"
 
 // Contoh Block 1:
-function runApp($name) {
-    // Terdapat 4 statement didalamnya
-    echo "Start Program" . PHP_EOL;
-    echo "Hello $name" . PHP_EOL;
-    echo "End Program" . PHP_EOL;
-}
+// function runApp($name) {
+//     // Terdapat 4 statement didalamnya
+//     echo "Start Program" . PHP_EOL;
+//     echo "Hello $name" . PHP_EOL;
+//     echo "End Program" . PHP_EOL;
+// }
 
-var_dump(runApp());
+// var_dump(runApp("Adrian"));
