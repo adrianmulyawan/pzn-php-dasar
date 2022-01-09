@@ -23,9 +23,8 @@
 // Menggunakan Ternary Operator
 $gender = "WANITA";
 $hi = ($gender == "PRIA") ? 'Hi Bro!' : 'Hi Nona!';
-
 echo $hi . PHP_EOL;
 
-$nilai = 50;
-$hasil = ($nilai >= 90) ? 'Anda Mendapat Nilai A' : ($nilai >= 80 ? 'Anda Mendapat Nilai B' : ($nilai >= 70 ? 'Anda Mendapat Nilai C' : 'Jelek Nilaimu'));
-echo $hasil . PHP_EOL;
+// $nilai = 50;
+// $hasil = ($nilai >= 90) ? 'Anda Mendapat Nilai A' : ($nilai >= 80 ? 'Anda Mendapat Nilai B' : ($nilai >= 70 ? 'Anda Mendapat Nilai C' : 'Jelek Nilaimu'));
+// echo $hasil . PHP_EOL;
