@@ -1,9 +1,9 @@
 <?php
 
 // Switch Statement
-// 1. Kadang kita hanya butuh menggunakan kondisi sederhana di if statements, seperti hnya menggunakan pebandingan == 
+// 1. Kadang kita hanya butuh menggunakan kondisi sederhana di if statements, seperti hanya menggunakan pebandingan "==" 
 // 2. Switch adalah statement percabangan yang sama dengan if, namun lebih sederhana cara pembuatannya
-// 3. Kondisi di Switch statement hanya untuk perbandingan ==
+// 3. Kondisi di Switch statement hanya untuk perbandingan "=="
 
 // Syntax Switch
 // switch ($variable) {
