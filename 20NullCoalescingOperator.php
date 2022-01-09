@@ -22,10 +22,14 @@
 // echo $action . PHP_EOL;
 
 // - Mengecek Data Null / Tidak Menggunak NULL COALESING OPERATOR
-$data = [];
-// $data = [
-//     "action" => "create"
-// ];
-$action = $data['action'] ?? 'nothing';
+// $data = [];
+$data = [
+    "action" => "create"
+];
 
+$action = $data['action'] ?? 'nothing';
 echo $action . PHP_EOL;
+
+// $orang = "Adrian Mulyawan";
+// $sayHi = "Hi $orang" ?? 'Tidak Ada User!';
+// echo $sayHi . PHP_EOL;
