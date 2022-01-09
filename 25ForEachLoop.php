@@ -12,6 +12,8 @@
 
 // - Mengakses array dengan for loop
 $names = ['Adrian', 'Manda', 'Alfan', 'Putri', 'Acha'];
+// i = 0: Index pada array dimulai dari 0
+// count($name): mengetahui berapa banyak data dalam array
 for ($i = 0; $i < count($names); $i++) { 
     echo "Data ke-{$i}: " . $names[$i] . PHP_EOL;
 }
