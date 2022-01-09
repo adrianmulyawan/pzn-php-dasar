@@ -26,5 +26,5 @@
 // echo $hi . PHP_EOL;
 
 $nilai = 50;
-$hasil = ($nilai >= 90) ? 'Anda Mendapat Nilai A' : ($nilai >= 80 ? 'Anda Mendapat Nilai B' : ($nilai >= 70 ? 'Anda Mendapat Nilai C' : 'Jelek Nilaimu'));
+$hasil = ($nilai == 90) ? 'Anda Mendapatkan Nilai A' : ($nilai == 80 ? 'Anda Mendapatkan Nilai B' : ($nilai == 70 ? 'Anda Mendapatkan Nilai C' : ($nilai == 60 ? 'Anda Mendapatkan Nilai C' : 'Anda Mendapatkan Nilai D')));
 echo $hasil . PHP_EOL;
