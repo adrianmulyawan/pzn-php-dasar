@@ -7,9 +7,11 @@
 // 4. Dan untuk memanggil callback function tsb, kita bisa menggunakan function "call_user_func(callable, arguments/parameter)"
 
 // - Kode: Callback Function
-function sayHello (string $name, callable $filter)
+function sayHello(string $name, callable $filter)
 {
     $finalName = call_user_func($filter, $name);
+    // Mirip seperti di materi Variable Function
+    // $finalName = $filter($name);
     echo "Hello $finalName" . PHP_EOL;
 }
 
