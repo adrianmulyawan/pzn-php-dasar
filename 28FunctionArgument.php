@@ -13,6 +13,7 @@
 // }
 // sayHello('Adrian');
 // sayHello('Manda');
+// sayHello(); => Error, karna kita tidak menambahkan argument/parameter didalamnya
 
 // - Contoh Function > 1 Argument
 // function sayHello($first_name, $last_name) {
@@ -21,7 +22,7 @@
 // sayHello('Adrian', 'Mulyawan');
 // sayHello('Mandalika', 'Ayusti');
 
-// ================================================================================================
+// ===============================================================================================
 
 // - Default Argument Value
 // 1. PHP mendukung default argument value
@@ -34,9 +35,9 @@
 
 // sayHello('Adrian');
 // sayHello('Mandalika');
-// sayHello();
+// sayHello(); => Tidak error, karna disini kita memiliki nilai defaulut parameter "User"
 
-// ================================================================================================
+// ===============================================================================================
 
 // - Kesalahan Default Argument Value
 // 1. Default argument value bisa disimpan didalam argument/parameter manapun
@@ -55,9 +56,9 @@
 //     echo "Hello $first_name $last_name" . PHP_EOL;
 // }
 // sayHello('Mulyawan');
-// sayHello('Mandalika', 'Ayusti');
+// sayHello('Ayusti', 'Mandalika');
 
-// ================================================================================================
+// ===============================================================================================
 
 // - Type Declaration
 // 1. Sama seperti variabel, argument di PHP bisa kita masukkan data yang dinamis
@@ -80,8 +81,8 @@
 
 // - Contoh Type Declaration
 // function sum(int $a, int $b) {
-//     $total = $a + $b;
-//     echo "Hasilnya Penjumlahan $a + $b = $total" . PHP_EOL;
+    // $total = $a + $b;
+    // echo "Hasilnya Penjumlahan $a + $b = $total" . PHP_EOL;
 // }
 
 // sum(100, 100);
@@ -92,7 +93,7 @@
 // String di parsing ke integer
 
 // sum("100", 'salah');
-// Hasil: False
+// Hasil: False / Error
 // Salah tidak bisa di parsing ke int
 
 // sum(true, false);
@@ -103,10 +104,10 @@
 // Hasil: False
 // Tidak bisa di konversi ke int
 
-// ================================================================================================
+// ===============================================================================================
 
 // - Variabel Length Argument List
-// 1. Variabel-length argument list merupakan kemampuan dimana kita bisa membuat sebuah parameter yang menerima banyak value
+// 1. Variabel-length argument list merupakan kemampuan dimana kita bisa membuat sebuah parameter yang menerima banyak value (data)
 // 2. Variabel-length argument list secara otomatis akan membuat argument tsb menjadi array, namun kita tidak perlu manual mengirim array ke functionnya
 // 3. Variabel length argument list hanya bisa dilakukan di argument posisi terakhir
 // 4. Untuk membuat variabel length argument list, kita bisa memngunakan tanda "..." (titik 3x) sebelum nama argument
@@ -123,20 +124,20 @@
 // Hasil: Total penjumlahan 1,2,3,4,5 adalah = 15
 
 // - Contoh Variabel length argument list
-// function sumAll(...$values) {
-//     $total = 0;
-//     foreach ($values as $value) {
-//         $total += $value;
-//     }
-//     echo "Total penjumlahan " . implode(",", $values) . " adalah = $total" . PHP_EOL;
-// }
+function sumAll(...$values) {
+    $total = 0;
+    foreach ($values as $value) {
+        $total += $value;
+    }
+    echo "Total penjumlahan " . implode(",", $values) . " adalah = $total" . PHP_EOL;
+}
 // sumAll(1,2,3,4,5);
 // Hasil: Total penjumlahan 1,2,3,4,5 adalah = 15
 
 // Bagaimana jika kita memiliki data yang berupa array ?
-// $values = [10,20,30,40,50];
+$values = [10,20,30,40,50];
 // sumAll($values); Hasilnya bakal error
 
 // Kita dapat menambahkan "..." (titik 3x didepan argument/parameter) pada saat memanggil functionnya
-// sumAll(...$values);
+sumAll(...$values);
 // Hasil: Total penjumlahan 1,2,3,4,5 adalah = 15
