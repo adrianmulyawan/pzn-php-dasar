@@ -6,30 +6,37 @@
 // 3. Anonymous function membuat kita bisa mengirim function sebagai argument di function lainnya
 
 // - Kode Anonymous Function
-$sayHello = function (string $name) {
+$sayHello = function (string $name) 
+{
     echo "Hello $name" . PHP_EOL;
 };
 $sayHello('Adrian Mulyawan');
+// Hasil: Hello Adrian Mulyawan
 $sayHello('Mandalika Ayusti Nawangsari');
+// Hasil: Hello Mandalika Ayusti Nawangsari
+
+// *$sayHello seakan-akan menjadi variable function
 
 // ================================================================================================
 
 // - Kode Anonymous Function Sebagai Argument/Parameter
-function sayGoodBye (string $name, $filter) {
+function sayGoodBye (string $name, $filter) 
+{
     $finalName = $filter($name);
     echo "Goodbye $finalName" . PHP_EOL;
 }
 // sayGoodBye("Wawan", function (string $name): string {
-//     return strtoupper($name);
+    // return strtoupper($name);
 // });
-// Hasil: Goodbye Wawan
+// Hasil: Goodbye WAWAN
 
 // Atau bisa kita simpan anonymous function ini didalam sebuah variabel
-$functionFilter = function (string $name): string {
+$functionFilter = function (string $name): string 
+{
     return strtoupper($name);
 };
 sayGoodBye("Wawan", $functionFilter);
-// Hasil: Goodbye Wawan
+// Hasil: Goodbye WAWAN
 
 // ================================================================================================
 
