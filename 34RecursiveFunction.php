@@ -11,6 +11,20 @@ function factorialLoop (int $value): int
 
     for ($i=1; $i <= $value ; $i++) { 
         $total *= $i;
+        // Iterasi 1: 1 x 1 = 1
+        // total = 1 (iterasi 1 ($i=1))
+
+        // Iterasi 2: 1 * 2 = 2
+        // total = 2 (iterasi 2 ($i=2))
+
+        // Iterasi 3: 2 * 3 = 6
+        // total = 6 (iterasi 3 ($i=3))
+
+        // Iterasi 4: 6 * 4 = 24
+        // total = 24 (iterasi 4 ($i=4))
+
+        // Iterasi 5: 24 * 5 = 120
+        // total = 120 (iterasi 5 ($i=5))
     }
 
     return $total;
@@ -20,11 +34,19 @@ var_dump(factorialLoop(5));
 // - Kode Factorial Menggunakan Recursive Function
 function factorialRecursive (int $value): int
 {
+    // value = 5
+    // value = 4
+    // value = 3
+    // value = 2
+    // value = 1
     if ($value == 1) {
         return 1;
     } else {
         return $value * factorialRecursive($value - 1);
-        // 5*4=20, 20*3=60, 60*2=120
+        // 5 * (5-1) = 20
+        // 20 * (4-1) = 60
+        // 60 * (3-1) = 120
+        // 120 * (2-1) = 120
     }
 }
 var_dump(factorialRecursive(5));
@@ -90,7 +112,7 @@ tampilkanAngka(10);
 // - Problem Recursive Function
 // 1. Walaupun recursive function itu sangat menarik, namun kita perlu berhati-hati
 // 2. Jika recursive terlalu dalam, maka akan ada kemungkinan terjadi memory overflow, yaitu error dimana memory terlalu banyak digunakan di PHP
-// 3. Kenapa problem ini terjadi? Karena kerika kita memanggil function, PHP akan menyimpannya didalam stack, jika function tsb memanggil function lain, maka stack akan menumpuk teus, dan jika terlalu banyak, makan akan membutuhkan konsumsi memory besar, jika sudah melewati batas, maka kan terjadi error memory
+// 3. Kenapa problem ini terjadi? Karena ketika kita memanggil function, PHP akan menyimpannya didalam stack, jika function tsb memanggil function lain, maka stack akan menumpuk terus, dan jika terlalu banyak, makan akan membutuhkan konsumsi memory besar, jika sudah melewati batas, maka kan terjadi error memory
 
 // - Kode: Error StackOverflow
 // function loop(int $value)
