@@ -113,7 +113,7 @@ var_dump($angka1);
 //     int(10)
 // }
 
-// 5. rsort() : Mengurutkan array terbalik
+// 5. rsort() / reverse sort : Mengurutkan array terbalik
 $angka2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 rsort($angka2);
 var_dump($angka2);
