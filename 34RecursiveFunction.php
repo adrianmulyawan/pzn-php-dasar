@@ -10,7 +10,10 @@ function factorialLoop (int $value): int
     $total = 1;
 
     for ($i=1; $i <= $value ; $i++) { 
-        $total *= $i;
+        $total = $total * $i;
+        // ($total *= $i)
+        
+        // Hasil Iterasi:
         // Iterasi 1: 1 x 1 = 1
         // total = 1 (iterasi 1 ($i=1))
 
@@ -30,6 +33,9 @@ function factorialLoop (int $value): int
     return $total;
 }
 var_dump(factorialLoop(5));
+// Hasil: 120
+
+echo PHP_EOL;
 
 // - Kode Factorial Menggunakan Recursive Function
 function factorialRecursive (int $value): int
@@ -42,6 +48,7 @@ function factorialRecursive (int $value): int
     if ($value == 1) {
         return 1;
     } else {
+        echo "Value: $value * " . $value - 1 . PHP_EOL;
         return $value * factorialRecursive($value - 1);
         // 5 * (5-1) = 20
         // 20 * (4-1) = 60
@@ -51,14 +58,16 @@ function factorialRecursive (int $value): int
 }
 var_dump(factorialRecursive(5));
 
+echo PHP_EOL;
+
 // - Contoh Fungsi Rekursif 1: tampilkan data (echo), lalu lakukan proses rekursif
 // function tampilkanAngka(int $jumlah, int $indeks = 1) 
 // {
-//     echo "Perulangan ke-{$indeks}" . PHP_EOL;
-//     # Panggil dirinya sendiri selama $indeks < $jumlah
-//     if ($indeks < $jumlah) {
-//         tampilkanAngka($jumlah, $indeks + 1);
-//     }
+    // echo "Perulangan ke-{$indeks}" . PHP_EOL;
+    // # Panggil dirinya sendiri selama $indeks < $jumlah
+    // if ($indeks < $jumlah) {
+        // tampilkanAngka($jumlah, $indeks + 1);
+    // }
 // }
 // tampilkanAngka(10);
 // Hasil:
@@ -80,13 +89,13 @@ function tampilkanAngka(int $jumlah, int $indeks = 1)
     if ($indeks < $jumlah) {
         tampilkanAngka($jumlah, $indeks + 1);
     }
-
+    
     echo "Perulangan ke-{$indeks}" . PHP_EOL;
 
 }
-// Panggil function tampilAngka()
-tampilkanAngka(10);
 
+// Panggil function tampilAngka()
+tampilkanAngka(5);
 // Hasil:
 // Perulangan ke-10
 // Perulangan ke-9
@@ -106,6 +115,8 @@ tampilkanAngka(10);
 // 4. Baru setelah rantai paling akhir tidak lagi memanggil dirinya sendiri, ia akan mulai menampilkan angka 20.
 // 5. Setelah rantai paling akhir selesai menampilkan angka 20, maka proses yang ke-19 pun dianggap telah selesai dari proses rekursif, dan ia akan mulai meng-echo angka 19.
 // 6. Begitu seterusnya hingga kembali ke perulangan yang pertama.
+
+echo PHP_EOL;
 
 // ================================================================================================
 
