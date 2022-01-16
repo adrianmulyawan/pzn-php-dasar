@@ -8,9 +8,11 @@
 // - Contoh String Function
 // 1. join() / implode() : menggabungkan array menjadi sebuah string
 var_dump(join(',', [1,2,3,4,5]));
-// Hasil: "1,2,3,4,5"
+// Hasil: string(9) "1,2,3,4,5"
 var_dump(implode(';', [10,11,12,13,14,15]));
-// Hasil: "10;11;12;13;14;15"
+// Hasil: string(17) "10;11;12;13;14;15"
+
+// ================================================================================================
 
 // 2. explode() : memecah string menjadi sebuah array
 var_dump(explode(" ", "Muhammad Adrian Mulyawan"));
@@ -25,17 +27,28 @@ var_dump(explode(" ", "Muhammad Adrian Mulyawan"));
 // }
 // Penjelasan yang diambil untuk dipecah menjadi array berdasarakn separotrnya, yang mana disini adalah "spasi" yang dijadikan acuan pemecahan string menjadi array
 
+$exExplode = explode(" ", "Mandalika Ayusti Nawangsari");
+echo "Hasil Explode Indeks ke-1: {$exExplode[0]}" . PHP_EOL;
+
+// ================================================================================================
+
 // 3. strtolower() : mengubah string menjadi lowercase (huruf kecil)
 var_dump(strtolower('AdRiAn'));
 // Hasil: "adrian"
+
+// ================================================================================================
 
 // 4. strtoupper() : mengubah string menjadi uppercase (huruf besar)
 var_dump(strtoupper('manda'));
 // Hasil: MANDA
 
+// ================================================================================================
+
 // 5. substr() : mengambil bagian string
 var_dump(substr('Adrian Mulyawan', 0, 3));
 // Hasil: Adr
+
+// ================================================================================================
 
 // 6. trim() : menghapus whitespace didepan dan belakang string
 var_dump(trim("       ADRIAN       "));
