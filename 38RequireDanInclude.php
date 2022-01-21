@@ -37,13 +37,13 @@
     // include "lib/myFunc.php";
     // echo sayHello("Adrian", "Mulyawan");
 
-// Jika menggunakan include jika file tsb tidak ada / typo dalam penulisannya erronya berbeda dengan menggunakan require. Jika menggunakna include error yang ditampilkan adalah function sayHello() tidak ditemukan dan warning.
+// Jika menggunakan include jika file tsb tidak ada / typo dalam penulisannya erronya berbeda dengan menggunakan require. Jika menggunakan include, error yang ditampilkan adalah function sayHello() tidak ditemukan dan warning.
 
 // ==============================================================================================
 
 // - Posisi Require dan Include
 // 1. Kode program PHP akan dibaca dari atas kebawah, oleh karena itu pastika posisi require dan include sesuai dengan yang kita inginkan
-// 2. Misal jika sampai kita salah menempatkan posisi require dan include, bisa jadi kita malah memanggil function yang belum 
+// 2. Misal jika sampai kita salah menempatkan posisi require dan include, bisa jadi kita malah memanggil function yang belum didefinisikan
 
 // Contoh Pemanggilan Require / Include yang salah
     // echo sayHello("Adrian", "Mulyawan");
@@ -57,7 +57,7 @@
 // 1. function require dan include akan selalu mengambil file yang kita inginkan
 // 2. Jika kita beberapa kali menggunakan require dan include file yang sama, makan file tsb akan berkali-kali pula kita ambil
 // 3. Hal ini akan menjadi masalah jika misal dalm file yang kita ambil terdapat definisi function, sehingga jika dimbil berkali-kali akan menyebabkan redeclare function
-// 4. Untuk di PHP terdapat function "require_once" dan "include_once", function ini bisa mendeteksi  jika kita sebelumnya pernah mengambil file yang sama, makan tidakan akan diambil lagi
+// 4. Untuk di PHP terdapat function "require_once" dan "include_once", function ini bisa mendeteksi jika kita sebelumnya pernah mengambil file yang sama, makan tidakan akan diambil lagi
 
 // - Contoh include berulang-ulang
     // include "lib/myFunction.php";
