@@ -95,8 +95,8 @@
 // =================================================================================================
 
 // - Static Scope
-// 1. Secara default local variable itu siklus hidupnya hanya sebatas function nya dieksekuis
-// 2. Jika sebuah funtion selesai dieksekuis, maka siklus hidup local variablenya selesai
+// 1. Secara default local variable itu siklus hidupnya hanya sebatas function nya dieksekusi
+// 2. Jika sebuah funtion selesai dieksekusi, maka siklus hidup local variablenya selesai
 // 3. PHP memiliki scope yang bernama static
 // 4. Static Scope hanya bisa di set ke local variable
 // 5. Saat kita membuat sebuah local variable menjadi static, maka siklus hidupnya tidak akan berhenti ketika sebuah function selesai dieksekusi
