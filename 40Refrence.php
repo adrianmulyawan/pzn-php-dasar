@@ -13,15 +13,16 @@
 // 1. Pertama, PHP Refrence bisa memungkinan kita bisa membuat beberapa variable menuju ke value yang sama
 
 // - Contoh Assign By Refrence
-    // $name = "Adrian";
+    $name = "Adrian";
+    $name = "Mulyawan";
 
 // Variable $otherName merefrence variable $name
-    // $otherName = &$name;
+    $otherName = &$name;
 // Ubah value $otherName = "Mandalika"
-    // $otherName = "Mandalika";
+    $otherName = "Mandalika";
 
 // Jalankan variable $name
-    // echo $name . PHP_EOL;
+    echo $name . PHP_EOL;
 // Hasil yang ditampilkan adalah "Mandalika", karena saat kita mengubah value dari refrence ($otherName) maka variable aslinya ikut berubah juga
 
 // =================================================================================================
@@ -39,31 +40,31 @@
     // $counter = 1;
     // increment($counter);
     
-    // echo $counter;
+    // echo $counter . PHP_EOL;
 // Hasilnya: 1
 
 // > Menggunakan Refrence
-    // function increment(int &$value)
-    // {
-        // $value++;
-        // echo "Nilai Value adalah $value" . PHP_EOL;
-    // }
+    function increment(int &$value)
+    {
+        $value++;
+        echo "Nilai Value adalah $value" . PHP_EOL;
+    }
 
-    // $counter = 1;
-    // increment($counter);
-    // echo "Nilai Counter adalah $counter" . PHP_EOL;
+    $counter = 1;
+    increment($counter);
+    echo "Nilai Counter adalah $counter" . PHP_EOL;
 
 // Hasilnya: 
 // Nilai Value adalah 2
 // Nilai Counter adalah 2
 
-// Karena disini argument/parameter "value" di function increment() merefrence ke variale $counter. Dimana pada saat function tsb dijalankan menaikan satu angka ($value = $value + 1) yang dimana argument $value tsb menyimpan nilai = 1. Dan Pada saat kita print "echo $counter" yang ditampilkan/dihasilkan adalah 2
+// Karena disini argument/parameter "value" di function increment() merefrence ke variale $counter. Dimana pada saat function tsb dijalankan menaikan satu angka ($value = $value + 1) yang dimana argument $value tsb menyimpan nilai = 2. Dan Pada saat kita print "echo $counter" yang ditampilkan/dihasilkan adalah 2
 
 // =================================================================================================
 
 // - Returning Refrence / Refrence Terhadap Return Value
 // 1. PHP juga bisa mengembalika refrence pada function
-// 2. Namun hati-hati, gunakan fitur ini jika memanga ada alasannya, karna fitur ini bisa membingungkan
+// 2. Namun hati-hati, gunakan fitur ini jika memang ada alasannya, karna fitur ini bisa membingungkan
 
 // - Contoh Returning Refrences
 // Tambahkan &getValue untuk memberitahu kita menggunakan Returning Refrence
@@ -77,9 +78,10 @@ function &getValue()
 $a = &getValue();
 // Ubah nilainya menjadi 200
 $a = 200;
+echo "Nilai Variabel A = $a" . PHP_EOL;
 
 // var b merefrence ke function getValue()
 $b = &getValue();
 // Jalankan var b
-echo $b . PHP_EOL;
+echo "Nilai Variabel B = $b" . PHP_EOL;
 // Hasilnya menjadi 200, karena di var a kita ubah valuenya menjadi 200 yang dimana $value juga menggunakan static scope sehingga siklus hidupnya tidak berhenti walapun function tsb telah selesai dieksekusi
